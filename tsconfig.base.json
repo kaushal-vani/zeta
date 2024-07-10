@@ -25,7 +25,8 @@
       "@zeta/zeta/profile/ui": ["libs/zeta/profile/ui/src/index.ts"],
       "@zeta/zeta/shared": ["libs/zeta/shared/src/index.ts"],
       "@zeta/zeta/task/smart": ["libs/zeta/task/smart/src/index.ts"],
-      "@zeta/zeta/task/ui": ["libs/zeta/task/ui/src/index.ts"]
+      "@zeta/zeta/task/ui": ["libs/zeta/task/ui/src/index.ts"],
+      "@zeta/zeta/timeline/smart": ["libs/zeta/timeline/smart/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
