@@ -17,7 +17,8 @@
     "paths": {
       "@zeta/zeta/home/smart": ["libs/zeta/home/smart/src/index.ts"],
       "@zeta/zeta/home/ui": ["libs/zeta/home/ui/src/index.ts"],
-      "@zeta/zeta/shared": ["libs/zeta/shared/src/index.ts"]
+      "@zeta/zeta/shared": ["libs/zeta/shared/src/index.ts"],
+      "@zeta/zeta/task/smart": ["libs/zeta/task/smart/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
