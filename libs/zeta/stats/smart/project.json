@@ -1,0 +1,36 @@
+{
+  "name": "zeta-stats-smart",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/zeta/stats/smart/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/zeta/stats/smart/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/zeta/stats/smart/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/zeta/stats/smart/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/zeta/stats/smart/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
