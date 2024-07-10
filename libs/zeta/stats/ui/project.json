@@ -31,6 +31,54 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint"
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/zeta/stats/ui/.storybook",
+        "browserTarget": "zeta-stats-ui:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/zeta-stats-ui",
+        "configDir": "libs/zeta/stats/ui/.storybook",
+        "browserTarget": "zeta-stats-ui:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c libs/zeta/stats/ui/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "zeta-stats-ui:build-storybook",
+        "staticFilePath": "dist/storybook/zeta-stats-ui",
+        "spa": true
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "zeta-stats-ui:build-storybook:ci"
+        }
+      }
     }
   }
 }
