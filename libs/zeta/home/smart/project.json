@@ -1,0 +1,36 @@
+{
+  "name": "zeta-home-smart",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/zeta/home/smart/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/zeta/home/smart/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/zeta/home/smart/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/zeta/home/smart/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/zeta/home/smart/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

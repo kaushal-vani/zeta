@@ -79,7 +79,6 @@
       "linter": "eslint",
       "unitTestRunner": "jest",
       "style": "scss"
-
     },
     "@nx/angular:component": {
       "style": "scss"
