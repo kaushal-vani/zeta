@@ -18,6 +18,7 @@
       "@zeta/zeta/authenticate/smart": [
         "libs/zeta/authenticate/smart/src/index.ts"
       ],
+      "@zeta/zeta/authenticate/ui": ["libs/zeta/authenticate/ui/src/index.ts"],
       "@zeta/zeta/home/smart": ["libs/zeta/home/smart/src/index.ts"],
       "@zeta/zeta/home/ui": ["libs/zeta/home/ui/src/index.ts"],
       "@zeta/zeta/shared": ["libs/zeta/shared/src/index.ts"],
