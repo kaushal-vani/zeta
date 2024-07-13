@@ -1,1 +1,13 @@
-<p>authenticate-page works!</p>
+<div [ngSwitch]="currentView">
+  <lib-add-email></lib-add-email>
+  <lib-add-phone-number></lib-add-phone-number>
+  <lib-authentication-drawer></lib-authentication-drawer>
+  <lib-edit-email></lib-edit-email>
+  <lib-edit-phone-number></lib-edit-phone-number>
+  <lib-forget-password></lib-forget-password>
+  <lib-log-in></lib-log-in>
+  <lib-one-time-password></lib-one-time-password>
+  <lib-sign-up></lib-sign-up>
+  <lib-verification-failure></lib-verification-failure>
+  <lib-verification-successful></lib-verification-successful>
+</div>
