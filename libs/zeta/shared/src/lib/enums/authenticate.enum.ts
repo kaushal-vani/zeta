@@ -13,10 +13,10 @@ export const enum SCREEN_VIEW {
 }
 
 export const enum BUTTON_NAME {
+    ADD = 'add',
     CANCEL = 'cancel',
     CONTINUE = 'continue',
     EDIT = 'edit',
-    ADD = 'add',
     FORGOT_PASSWORD = 'forgot-password',
     GO_TO_LOGIN = 'go-to-login',
     GO_TO_SIGN_UP = 'go-to-sign-up',
@@ -24,7 +24,7 @@ export const enum BUTTON_NAME {
     LOGOUT = 'logout',
     OTP_SUBMIT = 'otp-submit',
     RESEND = 'resend',
+    SET_UP_LATER = 'set-up-later',
     SIGN_UP = 'sign-up',
     VERIFY = 'verify',
-    SET_UP_LATER = 'set-up-later'
 }
