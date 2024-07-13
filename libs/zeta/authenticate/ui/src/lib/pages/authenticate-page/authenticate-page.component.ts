@@ -12,6 +12,7 @@ import { OneTimePasswordComponent } from '../../features/one-time-password/one-t
 import { SignUpComponent } from '../../features/sign-up/sign-up.component';
 import { VerificationFailureComponent } from '../../features/verification-failure/verification-failure.component';
 import { VerificationSuccessfulComponent } from '../../features/verification-successful/verification-successful.component';
+import { SCREEN_VIEW } from '@zeta/zeta/shared';
 
 @Component({
   selector: 'lib-authenticate-page',
@@ -34,5 +35,6 @@ import { VerificationSuccessfulComponent } from '../../features/verification-suc
   styleUrl: './authenticate-page.component.scss'
 })
 export class AuthenticatePageComponent {
-  currentView = '';
+  currentView : SCREEN_VIEW = SCREEN_VIEW.SIGN_UP;
+  authScreen = SCREEN_VIEW
 }
