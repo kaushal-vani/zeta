@@ -1,13 +1,27 @@
 <div [ngSwitch]="currentView">
-  <lib-add-email></lib-add-email>
-  <lib-add-phone-number></lib-add-phone-number>
-  <lib-authentication-drawer></lib-authentication-drawer>
-  <lib-edit-email></lib-edit-email>
-  <lib-edit-phone-number></lib-edit-phone-number>
-  <lib-forget-password></lib-forget-password>
-  <lib-log-in></lib-log-in>
-  <lib-one-time-password></lib-one-time-password>
-  <lib-sign-up></lib-sign-up>
-  <lib-verification-failure></lib-verification-failure>
-  <lib-verification-successful></lib-verification-successful>
+  <lib-add-email *ngSwitchCase="authScreen.ADD_EMAIL"></lib-add-email>
+  <lib-add-phone-number
+    *ngSwitchCase="authScreen.ADD_PHONE_NUMBER"
+  ></lib-add-phone-number>
+  <lib-authentication-drawer
+    *ngSwitchCase="authScreen.AUTHENTICATION_DRAWER"
+  ></lib-authentication-drawer>
+  <lib-edit-email *ngSwitchCase="authScreen.EDIT_EMAIL"></lib-edit-email>
+  <lib-edit-phone-number
+    *ngSwitchCase="authScreen.EDIT_PHONE_NUMBER"
+  ></lib-edit-phone-number>
+  <lib-forget-password
+    *ngSwitchCase="authScreen.FORGOT_PASSWORD"
+  ></lib-forget-password>
+  <lib-log-in *ngSwitchCase="authScreen.LOGIN"></lib-log-in>
+  <lib-one-time-password
+    *ngSwitchCase="authScreen.ONE_TIME_PASSWORD"
+  ></lib-one-time-password>
+  <lib-sign-up *ngSwitchCase="authScreen.SIGN_UP"></lib-sign-up>
+  <lib-verification-failure
+    *ngSwitchCase="authScreen.VERIFICATION_FAILURE"
+  ></lib-verification-failure>
+  <lib-verification-successful
+    *ngSwitchCase="authScreen.VERIFICATION_SUCCESSFUL"
+  ></lib-verification-successful>
 </div>
