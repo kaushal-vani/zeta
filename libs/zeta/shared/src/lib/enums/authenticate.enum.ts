@@ -28,3 +28,8 @@ export const enum BUTTON_NAME {
   SIGN_UP = 'signUp',
   VERIFY = 'verify'
 }
+
+export  enum DEVICE {
+  Phone_NUMBER = 'phoneNumber',
+  EMAIL = 'email'
+}
