@@ -11,3 +11,7 @@ export * from './lib/features/one-time-password/one-time-password.component';
 export * from './lib/features/sign-up/sign-up.component';
 export * from './lib/features/verification-failure/verification-failure.component';
 export * from './lib/features/verification-successful/verification-successful.component';
+
+/* Pages */
+
+export * from './lib/pages/authenticate-page/authenticate-page.component'
