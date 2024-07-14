@@ -26,3 +26,5 @@ export type ButtonName =
   | 'setUpLater'
   | 'sign-up'
   | 'verify';
+
+export type Size = 'small' | 'medium' | 'large';
