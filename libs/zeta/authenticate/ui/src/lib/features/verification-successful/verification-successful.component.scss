@@ -1,0 +1,53 @@
+.verification-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon-container {
+    width: 60px; /* Adjust size as needed */
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.checkmark {
+    width: 100%;
+    height: 100%;
+    stroke: #4caf50; /* Green color */
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    fill: none;
+}
+
+.checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 1.5;
+    stroke-miterlimit: 10;
+    stroke: #4caf50; /* Green color */
+    fill: none;
+    animation: stroke 1s ease forwards; /* Animation for the circle */
+}
+
+.checkmark-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 1s 0.5s ease forwards; /* Animation for the check mark */
+}
+
+.message {
+    font-size: 18px;
+}
+
+.message p:first-child {
+    font-weight: bold; /* Bold text for the first paragraph */
+}
+
+@keyframes stroke {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
