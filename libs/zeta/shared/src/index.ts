@@ -1,3 +1,8 @@
+/* Component */
+export * from './lib/components/footer/footer.component';
+export * from './lib/components/header/header.component';
+export * from './lib/components/loader/loader.component';
+
 /* Enum */
 export * from './lib/enums/authenticate.enum';
 
