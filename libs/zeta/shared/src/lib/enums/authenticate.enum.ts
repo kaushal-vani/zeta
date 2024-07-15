@@ -9,7 +9,8 @@ export enum SCREEN_VIEW {
   ONE_TIME_PASSWORD = 'oneTimePassword',
   SIGN_UP = 'signUp',
   VERIFICATION_FAILURE = 'verificationFailure',
-  VERIFICATION_SUCCESSFUL = 'verificationSuccessful'
+  VERIFICATION_SUCCESSFUL = 'verificationSuccessful',
+  NONE = ''
 }
 
 export const enum BUTTON_NAME {
