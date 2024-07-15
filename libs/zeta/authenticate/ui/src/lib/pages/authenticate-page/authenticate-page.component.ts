@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 /* Feature Components */
 import { AddEmailComponent } from '../../features/add-email/add-email.component';
@@ -12,7 +12,7 @@ import { OneTimePasswordComponent } from '../../features/one-time-password/one-t
 import { SignUpComponent } from '../../features/sign-up/sign-up.component';
 import { VerificationFailureComponent } from '../../features/verification-failure/verification-failure.component';
 import { VerificationSuccessfulComponent } from '../../features/verification-successful/verification-successful.component';
-import { SCREEN_VIEW } from '@zeta/zeta/shared';
+import { SCREEN_VIEW, ScreenAction, ScreenNavigationService } from '@zeta/zeta/shared';
 
 @Component({
   selector: 'lib-authenticate-page',
@@ -35,6 +35,11 @@ import { SCREEN_VIEW } from '@zeta/zeta/shared';
   styleUrl: './authenticate-page.component.scss'
 })
 export class AuthenticatePageComponent {
-  currentView : SCREEN_VIEW = SCREEN_VIEW.SIGN_UP;
-  authScreen = SCREEN_VIEW
+  private screenNavigation = inject(ScreenNavigationService)
+  currentView: SCREEN_VIEW = SCREEN_VIEW.AUTHENTICATION_DRAWER;
+  authScreen = SCREEN_VIEW;
+
+  redirect(screen: ScreenAction) {
+    this.screenNavigation.initiateRedirect(screen)
+}
 }

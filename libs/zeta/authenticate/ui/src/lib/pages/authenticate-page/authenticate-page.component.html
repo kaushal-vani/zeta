@@ -5,6 +5,7 @@
   ></lib-add-phone-number>
   <lib-authentication-drawer
     *ngSwitchCase="authScreen.AUTHENTICATION_DRAWER"
+    (navigate)="redirect($event)"
   ></lib-authentication-drawer>
   <lib-edit-email *ngSwitchCase="authScreen.EDIT_EMAIL"></lib-edit-email>
   <lib-edit-phone-number
@@ -17,7 +18,8 @@
   <lib-one-time-password
     *ngSwitchCase="authScreen.ONE_TIME_PASSWORD"
   ></lib-one-time-password>
-  <lib-sign-up *ngSwitchCase="authScreen.SIGN_UP"></lib-sign-up>
+  <lib-sign-up *ngSwitchCase="authScreen.SIGN_UP"
+  (navigate)="redirect($event)"></lib-sign-up>
   <lib-verification-failure
     *ngSwitchCase="authScreen.VERIFICATION_FAILURE"
   ></lib-verification-failure>
