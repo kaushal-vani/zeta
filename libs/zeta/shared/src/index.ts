@@ -9,8 +9,11 @@ export * from './lib/constants/authenticate.constants';
 /* Enum */
 export * from './lib/enums/authenticate.enum';
 
-/* Type */
-export * from './lib/types/authenticate.type';
-
 /* Interface */
 export * from './lib/models/authenticate.interfaces';
+
+/* Service */
+export * from './lib/services/screen-navigation.service'
+
+/* Type */
+export * from './lib/types/authenticate.type';
