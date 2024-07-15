@@ -1,1 +1,73 @@
-<p>calender works!</p>
+<!-- <div class="calendar">
+  <div class="header">
+    <button (click)="previousMonth()">Previous</button>
+    <span>{{ currentMonthName }} {{ currentYear }}</span>
+    <button (click)="nextMonth()">Next</button>
+  </div>
+  <div class="week">
+    <div class="day" *ngFor="let dayName of dayNames">{{ dayName }}</div>
+  </div>
+  <div class="week" *ngFor="let week of calendar">
+    <div
+      class="day"
+      *ngFor="let day of week"
+      [ngClass]="{
+        active: isActive(day),
+        inactive: !isActive(day),
+        'current-day': isCurrentDay(day)
+      }"
+      (click)="selectDate(day)"
+    >
+      {{ day ? day.getDate() : '' }}
+    </div>
+  </div>
+</div> -->
+
+<div class="container-fluid">
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <td>
+            <span>
+              {{ currentMonthName }}
+            </span>
+          </td>
+          <td>
+            {{ currentYear }}
+          </td>
+          <td>
+            <button (click)="previousMonth()">Pre</button>
+          </td>
+          <td>
+            <button (click)="nextMonth()">Next</button>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          @for ( day of dayNames; track dayNames){
+          <td>{{ day }}</td>
+          }
+        </tr>
+        @for (week of calendar; track calendar) {
+        <tr>
+          @for (day of week; track $index) {
+          <td
+            class="day"
+            [ngClass]="{
+              active: isActive(day),
+              inactive: !isActive(day),
+              'current-day': isCurrentDay(day)
+            }"
+            (click)="selectDate(day)"
+          >
+            {{ day ? day.getDate() : '' }}
+          </td>
+          }
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+.day {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.day.active {
+  color: green;
+}
+
+.day.inactive {
+  color: blue;
+}
+
+.day:hover {
+  background-color: #ddd;
+}
+.day.current-day {
+  background-color: green; /* Change this to your desired color for the current date */
+  color: #fff;
+}
+
+table {
+  border: 1px solid;
+}
+td {
+  width: 10%;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid;
+}
+.month-year {
+  width: 50%;
+}
