@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from 'zenova/components';
 import { SCREEN_VIEW, ScreenAction } from '@zeta/zeta/shared';
+import { ButtonComponent } from 'zenova';
 
 @Component({
   selector: 'lib-sign-up',
