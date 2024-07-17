@@ -16,7 +16,7 @@ export class AuthenticationDrawerComponent {
     this.navigate.emit({
       currentView: SCREEN_VIEW.AUTHENTICATION_DRAWER,
       nextView: SCREEN_VIEW.ONE_TIME_PASSWORD,
-      deviceType: DEVICE.Phone_NUMBER,
+      deviceType: DEVICE.PHONE_NUMBER,
     });
   }
 
