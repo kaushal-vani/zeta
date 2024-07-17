@@ -31,6 +31,6 @@ export const enum BUTTON_NAME {
 }
 
 export  enum DEVICE {
-  Phone_NUMBER = 'phoneNumber',
+  PHONE_NUMBER = 'phoneNumber',
   EMAIL = 'email'
 }
