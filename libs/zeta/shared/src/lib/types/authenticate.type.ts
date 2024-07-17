@@ -24,7 +24,7 @@ export type ButtonName =
   | 'otpSubmit'
   | 'resend'
   | 'setUpLater'
-  | 'sign-up'
+  | 'signUp'
   | 'verify';
 
 export type Size = 'small' | 'medium' | 'large';
